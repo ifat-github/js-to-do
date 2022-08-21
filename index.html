@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <title>JS To-Do</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <form onsubmit="createToDoForm()">
+        <label>Insert a To-Do item:<input type="text" id="toDoTitle"></label>
+        <button type="submit">Save</button>
+        <p id="alert"></p>
+    </form>
+    <div>
+        <button type="submit" onclick="filterDone()">Show Done Only</button>
+        <button type="submit" onclick="filterNotDone()">Show Not Done Only</button>
+        <button type="submit" onclick="showAll()">Show All</button>
+    </div>
+    <form oninput="searchForm()">
+        <label>Search a To-Do Item:<input type="text" id="searchValue"></label>
+    </form>
+    <ul id="toDoList" style="list-style: none">
+        <!-- mock info -->
+        <li class="done">
+            <input type="Checkbox" onchange="checkboxChange()" checked><label>Clean</label>
+        </li>
+        <li>
+            <input type="Checkbox" onchange="checkboxChange()"><label>Write</label>
+        </li>
+        <li class="done">
+            <input type="Checkbox" onchange="checkboxChange()" checked><label>Learn</label>
+        </li>
+        <!-- mock info -->
+    </ul>
+    <script src="js/index.js"></script>
+</body>
+</html>
